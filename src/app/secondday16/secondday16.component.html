@@ -1,0 +1,12 @@
+<input [(ngModel)] = "newName" type="text">
+<button (click)= "addName()">Add Name</button>
+
+<h5>Names:</h5>
+
+
+<div *ngFor = "let n of names; let i = index">
+    <ng-container *ngIf= "n != 'Mike'">
+    {{n}}
+    <button (click)= "removeName(i)" >Remove Name</button>
+    </ng-container>
+</div>
